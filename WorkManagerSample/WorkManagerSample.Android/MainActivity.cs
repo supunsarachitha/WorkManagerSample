@@ -24,7 +24,7 @@ namespace WorkManagerSample.Droid
 
             PeriodicWorkRequest taxWorkRequest = PeriodicWorkRequest.Builder.From<CalculatorWorker>(TimeSpan.FromMinutes(20)).Build();
 
-            WorkManager.Instance.Enqueue(taxWorkRequest);
+            WorkManager.GetInstance(this).Enqueue(taxWorkRequest);
         }
     }
 }
